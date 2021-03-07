@@ -12,6 +12,13 @@
       >
         {{ link.label }}
       </v-btn>
+
+      <v-switch
+        @click="toggleTheme"
+        class="ml-4 mt-5"
+        v-model="switch1"
+        label="Dark Mode"
+      ></v-switch>
     </v-app-bar>
 
     <v-content>
@@ -43,6 +50,7 @@ export default {
   name: "App",
 
   data: () => ({
+    switch1: false,
     links: [
       {
         label: "Home",
@@ -69,6 +77,10 @@ export default {
   methods: {
     onResize() {
       console.log("This window size is changing!");
+    },
+
+    toggleTheme() {
+      this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
     },
   },
 };
