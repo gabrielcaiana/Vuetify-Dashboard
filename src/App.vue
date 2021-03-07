@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app v-resize="onResize">
     <v-app-bar app color="primary" dark>
       <v-toolbar-title>Vuetify Dashboard</v-toolbar-title>
       <v-spacer></v-spacer>
@@ -65,5 +65,11 @@ export default {
       },
     ],
   }),
+
+  methods: {
+    onResize() {
+      console.log("This window size is changing!");
+    },
+  },
 };
 </script>
