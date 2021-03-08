@@ -1,5 +1,5 @@
 <template>
-  <v-app v-resize="onResize">
+  <v-app id="app" v-resize="onResize">
     <v-app-bar app color="primary" dark>
       <v-toolbar-title>Vuetify Dashboard</v-toolbar-title>
       <v-spacer></v-spacer>
@@ -85,3 +85,10 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+@import './assets/css/fonts.css';
+  #app {
+    font-family: 'Poppins' !important;
+  }
+</style>
